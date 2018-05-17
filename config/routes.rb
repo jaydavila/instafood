@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   root 'pages#index'
   get 'pages/index', to: 'pages#index'
 
-  get '/recipes', to: 'recipes#index'
-  get '/recipes/:id', to: 'recipes#show', as: 'recipe'
-
+  resources :recipes
+  
 end

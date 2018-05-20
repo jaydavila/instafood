@@ -19,7 +19,7 @@ class ChefsController < ApplicationController
     @chef = Chef.new(chef_params)
     if @chef.save
       session[:chef_id] = @chef.id
-      flash[:success] = "Welcome #{@chef.chefname} to MyRecipes App!"
+      flash[:success] = "Welcome #{@chef.chefname} to InstaFood!"
       redirect_to chef_path(@chef)
     else
       render 'new'

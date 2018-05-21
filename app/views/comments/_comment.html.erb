@@ -10,8 +10,8 @@
       <p><%= comment.description %></p>
       <p>
         <span class="quiet"><small>Created
-          <%= time_ago_in_words(@recipe.created_at) %> ago by |
-                    <%= @recipe.chef.chefname.capitalize %>
+          <%= time_ago_in_words(comment.created_at) %> ago by |
+                    <%= comment.chef.chefname.capitalize %>
           </small></span>
       </p>
   </div>

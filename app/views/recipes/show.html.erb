@@ -25,7 +25,7 @@
             <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class: "btn btn-xs btn-warning" %>
             <%= link_to "Delete this recipe" , recipe_path(@recipe), method: :delete, data: { confirm: "Are you sure ?" }, class: "btn btn-xs btn-danger" %>
         <% end %>
-            <%= link_to "Find more recipes", recipe_path, class: "btn btn-xs btn-primary" %>
+            <%= link_to "Find more recipes", recipes_path, class: "btn btn-xs btn-primary" %>
       </div>
 </div>
 
@@ -34,7 +34,7 @@
     <div class="col-md-8 col-md-offset-2">
       <h3>Comments: </h3>
       <hr>
-      <%= form_for([@recipe, @comment], :html => {class: "form-horizontal", role: "form"}) do |f| %>
+      <%= form_for([@recipe, @comment], remote: true, :html => {class: "form-horizontal", role: "form"}) do |f| %>
         <div class="form-group">
           <div class="control-label col-md-2">
             <%= f.label :description, "Comment" %>

@@ -30,6 +30,7 @@ $navbar-default-bg:#f7d591;
 footer{
   background-color: #f7d591;
   min-height: 25px;
+  margin-top: 15pc;
 }
 
 .jumbotron{
@@ -113,4 +114,8 @@ footer{
 
 .input_checkbox input {
   width: auto !important;
+}
+
+.badge{
+  background-color: #efb1b1;
 }
